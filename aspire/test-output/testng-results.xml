@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-06-26T01:12:59 EDT" name="Default suite" finished-at="2021-06-26T01:13:23 EDT" duration-ms="23126">
+    <groups>
+    </groups>
+    <test started-at="2021-06-26T01:12:59 EDT" name="Default test" finished-at="2021-06-26T01:13:23 EDT" duration-ms="23126">
+      <class name="aspireTests.NewTest">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:aspireTests.NewTest@2611b9a3]" started-at="2021-06-26T01:12:59 EDT" name="beforeClass" finished-at="2021-06-26T01:12:59 EDT" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:aspireTests.NewTest@2611b9a3]" started-at="2021-06-26T01:12:59 EDT" name="beforeMethod" finished-at="2021-06-26T01:13:03 EDT" duration-ms="3431" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="f()[pri:0, instance:aspireTests.NewTest@2611b9a3]" started-at="2021-06-26T01:13:03 EDT" name="f" finished-at="2021-06-26T01:13:22 EDT" duration-ms="18933" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:aspireTests.NewTest@2611b9a3]" started-at="2021-06-26T01:13:22 EDT" name="afterMethod" finished-at="2021-06-26T01:13:23 EDT" duration-ms="713" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:aspireTests.NewTest@2611b9a3]" started-at="2021-06-26T01:13:23 EDT" name="afterClass" finished-at="2021-06-26T01:13:23 EDT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- aspireTests.NewTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
