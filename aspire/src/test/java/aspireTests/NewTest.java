@@ -35,24 +35,22 @@ public class NewTest extends BaseTestHelper {
 	}
 	
 	@Test
-	public void f() throws InterruptedException {
+	public void verifyProducts() throws InterruptedException {
 
 		System.out.println("the_user_clicks_on_the_spend_and_save");
-		homePage = new HomePage(driver);
-		//homePage.clickOnLink(Links.SpendAndSave);
-		homePage.clickOnClickAndSave(driver);
-		Thread.sleep(5000);
+		homePage = new HomePage(driver); 
+		homePage.clickOnClickAndSave(driver); 
 		
 		productsPage = new ProductsPage(driver);
 		int cnt=  productsPage.getNumberOfProducts(driver);
 		assertEquals(cnt, 2);
 		
-		 
+		//clicking on get Aspiration product
 		productsPage.clickOnGetAspiration(driver); 
 		assertTrue(productsPage.isModalPopUpDisplayed_Aspiration(driver));
 		productsPage.closePopUp(driver);
 		
-		 
+		 //clicking on get Aspiration plus product
 		productsPage.clickOnGetAspirationPlus(driver); 
 		assertTrue(productsPage.isModalPopUpDisplayed_AspirationPlus(driver));
 		Pair<String, String> subscriptionValues = productsPage.getSubscriptionPrice(driver);
