@@ -57,11 +57,7 @@ public class ConfigProperties {
 	}
 	
 	public static String getHostUrl(String storeFront) {
-		String url = getPropertiesFile().getProperty(getEnv() + "." + storeFront +"testurl");
-		/*String env = getAutomationEnv();
-		if(env.contains("true"))
-			url = url.replace("8080", "8081");*/
-		return url;
+		 return getPropertiesFile().getProperty(getEnv() + "." + storeFront +"testurl"); 
 	}
 
 	public static String getUserName(String storeFront) {
