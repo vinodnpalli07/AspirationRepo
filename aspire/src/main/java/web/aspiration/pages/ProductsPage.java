@@ -16,6 +16,10 @@ public class ProductsPage extends PageObject{
 	WebDriver driver;
 	
 	private By divProduct = By.xpath("//div[@class='plan-content']"); 
+	private By btnPlanPlus = By.cssSelector(".plan-a-plus .btn"); 
+	private By btnOrginal = By.cssSelector(".plan-original .btn"); 
+	private By btnOrginalPlus = By.cssSelector(".plan-a-plus .btn");
+	private By btnClose = By.cssSelector(".plan-a-plus .btn")
 	
 	@FindBy(xpath = "(//button[contains(.,'Get Aspiration')])[1]")
 	private WebElementFacade btnGetAspiration;		
@@ -47,7 +51,7 @@ public class ProductsPage extends PageObject{
 	 * @return
 	 */
 	public boolean isModalPopUpDisplayed_Aspiration(WebDriver driver) {
-		return SeleniumHelper.isWebElementVisible(driver, By.cssSelector(".plan-a-plus .btn"),3500);
+		return SeleniumHelper.isWebElementVisible(driver, btnPlanPlus ,3500);
 	}
 	
 	/**
@@ -56,7 +60,7 @@ public class ProductsPage extends PageObject{
 	 * @return
 	 */
 	public boolean isModalPopUpDisplayed_AspirationPlus(WebDriver driver) {
-		return SeleniumHelper.isWebElementVisible(driver, By.cssSelector(".plan-a-plus .btn"),3500);
+		return SeleniumHelper.isWebElementVisible(driver, btnPlanPlus ,3500);
 	}
 	
 	/**
@@ -80,7 +84,7 @@ public class ProductsPage extends PageObject{
 	 * @param driver
 	 */
 	public void clickOnGetAspiration(WebDriver driver) { 
-		driver.findElement(By.cssSelector(".plan-original .btn")).click();
+		driver.findElement(btnOrginal).click();
 	}
 	
 	/**
@@ -88,7 +92,7 @@ public class ProductsPage extends PageObject{
 	 * @param driver
 	 */
 	public void clickOnGetAspirationPlus(WebDriver driver) { 
-		driver.findElement(By.cssSelector(".plan-a-plus .btn")).click();
+		driver.findElement(btnOrginalPlus).click();
 	}
 	
 	/**
@@ -96,7 +100,7 @@ public class ProductsPage extends PageObject{
 	 * @param driver
 	 */
 	public void closePopUp(WebDriver driver) {
-		SeleniumHelper.findElement(driver, By.cssSelector(".plan-a-plus .btn")).sendKeys(Keys.ESCAPE);
+		SeleniumHelper.findElement(driver, btnClose).sendKeys(Keys.ESCAPE);
 	}
 	
 }
