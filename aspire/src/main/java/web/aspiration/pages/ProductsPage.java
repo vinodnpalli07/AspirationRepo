@@ -29,7 +29,7 @@ public class ProductsPage extends PageObject{
 	public ProductsPage(WebDriver driver) { 
 
 		this.driver = driver;
-		//PageFactory.initElements(driver, this); 
+		//PageFactory.initElements(driver, this);  // Commented out on purpose to show to Factory Initialization
 	}
 	
 	/**
@@ -67,28 +67,19 @@ public class ProductsPage extends PageObject{
 	public Pair<String,String> getSubscriptionPrice(WebDriver driver)
 	{
 		SeleniumHelper.click(driver, By.xpath("//div[2]/div"));
-		String yearly = SeleniumHelper.getText(driver, By.xpath("//div[2]/div/p"));
-		
-		//driver.findElement(By.xpath("//div[2]/div")).click();
-		//String yearly = driver.findElement(By.xpath("//div[2]/div/p")).getText();
-
+		String yearly = SeleniumHelper.getText(driver, By.xpath("//div[2]/div/p")); 
 		
 		SeleniumHelper.click(driver, By.xpath("//div[2]/div[2]/div"));		
 		String monthly = SeleniumHelper.getText(driver, By.xpath("//div[2]/p"));
-		
-		//driver.findElement(By.xpath("//div[2]/div[2]/div")).click();
-		//String monthly =  driver.findElement(By.xpath("//div[2]/p")).getText();
 		 
-		return  new Pair<String,String>(yearly,monthly) ;
-		
+		return  new Pair<String,String>(yearly,monthly) ; 
 	}
 
 	/**
 	 * 
 	 * @param driver
 	 */
-	public void clickOnGetAspiration(WebDriver driver) {
-		//SeleniumHelper.click(driver, By.cssSelector(".plan-original .btn"));
+	public void clickOnGetAspiration(WebDriver driver) { 
 		driver.findElement(By.cssSelector(".plan-original .btn")).click();
 	}
 	
@@ -96,8 +87,7 @@ public class ProductsPage extends PageObject{
 	 *
 	 * @param driver
 	 */
-	public void clickOnGetAspirationPlus(WebDriver driver) {
-		//SeleniumHelper.click(driver, By.cssSelector(".plan-a-plus .btn"));
+	public void clickOnGetAspirationPlus(WebDriver driver) { 
 		driver.findElement(By.cssSelector(".plan-a-plus .btn")).click();
 	}
 	
