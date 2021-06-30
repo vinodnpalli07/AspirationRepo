@@ -55,7 +55,7 @@ public abstract class SeleniumHelper {
 	public static WebElement findElement(WebDriver driver, By by) {
 		waitForPageContainsWebElement(driver, by);
 
-		// log.info("finding element " + by.toString());
+		log.info("finding element " + by.toString());
 		return driver.findElement(by);
 	}
 
@@ -82,9 +82,7 @@ public abstract class SeleniumHelper {
 	 * @param driver
 	 * @param by
 	 */
-	public static void click(WebDriver driver, By by) {
-		// waitForWebElementNotVisible(driver,
-		// By.xpath("//div[@class='wait_initial_form intouch-loader']"));
+	public static void click(WebDriver driver, By by) { 
 
 		waitForElementHasStoppedMoving(driver, by);
 
@@ -198,9 +196,7 @@ public abstract class SeleniumHelper {
 	 * 
 	 * @param item to be selected from the dropDown
 	 */
-	public static void selectItemFromListBox(WebDriver driver, WebElement ele, String item) {
-		// waitForWebElementVisible(driver, ele);
-
+	public static void selectItemFromListBox(WebDriver driver, WebElement ele, String item) {  
 		log.info("selecting " + item + " from dropdown " + ele.toString());
 		Select select = new Select(ele);
 		select.selectByVisibleText(item);
